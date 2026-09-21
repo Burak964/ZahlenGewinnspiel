@@ -123,6 +123,16 @@ public class GewinnView extends JFrame {
         lblGesamtPunkte.setText(
                 String.valueOf(controller.getGesamtPunkte())
         );
+        if (controller.hatGewonnen() || ergebnis > 0) {
+            lblRundenErgebnis.setBackground(Color.GREEN);
+            lblGesamtPunkte.setBackground(Color.GREEN);
+        } else if (controller.hatVerloren() || ergebnis < 0) {
+            lblRundenErgebnis.setBackground(Color.RED);
+            lblGesamtPunkte.setBackground(Color.RED);
+        } else {
+            lblRundenErgebnis.setBackground(Color.WHITE);
+            lblGesamtPunkte.setBackground(Color.WHITE);
+        }
     }
     private void neueRunde() {
         txtSpielerZahl.setText("");
