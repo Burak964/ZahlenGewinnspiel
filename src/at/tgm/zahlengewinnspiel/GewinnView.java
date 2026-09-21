@@ -85,6 +85,7 @@ public class GewinnView extends JFrame {
 
         // ENTER drücken
         txtSpielerZahl.addActionListener(e -> spieleRunde());
+        btnNochmal.addActionListener(e -> neueRunde());
 
         setLocationRelativeTo(null);
         setVisible(true);
@@ -122,5 +123,12 @@ public class GewinnView extends JFrame {
         lblGesamtPunkte.setText(
                 String.valueOf(controller.getGesamtPunkte())
         );
+    }
+    private void neueRunde() {
+        txtSpielerZahl.setText("");
+        txtComputerZahl.setText("");
+        lblRundenErgebnis.setText("Tippe eine Zahl von 1 bis 9");
+
+        txtSpielerZahl.requestFocus();
     }
 }
