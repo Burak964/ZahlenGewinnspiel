@@ -76,6 +76,7 @@ public class GewinnView extends JFrame {
         JPanel unten = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
         btnNochmal = new JButton("Noch einmal!");
+        btnNochmal.setEnabled(false);
 
         unten.add(btnNochmal);
 
@@ -123,11 +124,16 @@ public class GewinnView extends JFrame {
         lblGesamtPunkte.setText(
                 String.valueOf(controller.getGesamtPunkte())
         );
+        txtSpielerZahl.setEditable(false);
+        btnNochmal.setEnabled(true);
     }
     private void neueRunde() {
         txtSpielerZahl.setText("");
         txtComputerZahl.setText("");
         lblRundenErgebnis.setText("Tippe eine Zahl von 1 bis 9");
+
+        txtSpielerZahl.setEditable(true);
+        btnNochmal.setEnabled(false);
 
         txtSpielerZahl.requestFocus();
     }
