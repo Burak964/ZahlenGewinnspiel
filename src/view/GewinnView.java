@@ -1,4 +1,6 @@
-package at.tgm.zahlengewinnspiel;
+package view;
+
+import controller.GewinnController;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

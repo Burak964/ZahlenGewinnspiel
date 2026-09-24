@@ -1,6 +1,6 @@
-import at.tgm.zahlengewinnspiel.GewinnController;
-import at.tgm.zahlengewinnspiel.GewinnModel;
-import at.tgm.zahlengewinnspiel.GewinnView;
+import controller.GewinnController;
+import model.GewinnModel;
+import view.GewinnView;
 
 import javax.swing.*;
 

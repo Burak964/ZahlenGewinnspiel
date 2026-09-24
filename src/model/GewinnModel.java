@@ -1,4 +1,4 @@
-package at.tgm.zahlengewinnspiel;
+package model;
 
 public class GewinnModel {
     private int gesamtPunkte;

@@ -1,4 +1,6 @@
-package at.tgm.zahlengewinnspiel;
+package controller;
+
+import model.GewinnModel;
 
 public class GewinnController {
     private final GewinnModel model;
