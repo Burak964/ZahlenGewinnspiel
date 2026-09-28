@@ -2,6 +2,9 @@ package view;
 
 import controller.GewinnController;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -87,8 +90,12 @@ public class GewinnView extends JFrame {
         add(hauptPanel);
 
         // ENTER drücken
-        txtSpielerZahl.addActionListener(e -> spieleRunde());
-        btnNochmal.addActionListener(e -> neueRunde());
+        txtSpielerZahl.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                spieleRunde();
+            }
+        });
 
         setLocationRelativeTo(null);
         setVisible(true);
