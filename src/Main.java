@@ -13,5 +13,6 @@ public class Main {
             GewinnController controller = new GewinnController(model);
 
             new GewinnView(controller);
+
     }
 }
