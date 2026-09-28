@@ -83,6 +83,14 @@ public class GewinnView extends JFrame {
         btnNochmal = new JButton("Noch einmal!");
         btnNochmal.setEnabled(false);
 
+        btnNochmal.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                neueRunde();
+            }
+        });
+
+
         unten.add(btnNochmal);
 
         hauptPanel.add(unten, BorderLayout.SOUTH);
